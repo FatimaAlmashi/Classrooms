@@ -14,7 +14,7 @@ class Classroom(models.Model):
 class Student(models.Model):
 	name = models.CharField(max_length=120)
 	classroom = models.ForeignKey(Classroom, on_delete=models.CASCADE)
-	date_of_birth = models.IntegerField()
+	date_of_birth = models.DateField()
 	exam_grade = models.DecimalField(max_digits=10, decimal_places=3)
 	
 	GENDER_CHOICES = (
